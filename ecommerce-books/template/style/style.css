@@ -1,0 +1,86 @@
+@import url("https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap");
+span, #search, nav, header {
+  display: flex;
+  align-items: row;
+  justify-content: space-around;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: #f7f9fb;
+  width: 100%;
+}
+
+header {
+  background: #687864;
+  width: 100%;
+}
+
+#label {
+  font-family: "Architects Daughter", cursive;
+  font-weight: bold;
+  font-size: 20px;
+  color: #8fc1e3;
+}
+
+nav {
+  background: #687864;
+  border-top: 4px solid #f7f9fb;
+  padding: 1.8rem;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+#logo {
+  font-family: "Architects Daughter", cursive;
+  font-weight: 400;
+  text-shadow: 2px 2px 3px black;
+  font-size: 4rem;
+  color: #f7f9fb;
+}
+
+#search {
+  padding: 2rem;
+  color: #f7f9fb;
+  font-family: "Architects Daughter", cursive;
+  font-weight: 300;
+  font-size: 1rem;
+}
+
+input {
+  flex-shrink: 0;
+  border-color: black;
+  width: 17rem;
+  height: 2.2rem;
+  padding: 0 0.5rem;
+  margin-left: 0.5rem;
+}
+
+span .sing-icon {
+  width: 3rem;
+  height: 3rem;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-image: url("user.png");
+  display: flex;
+  margin: 0 9rem 0 0.5rem;
+}
+span a {
+  color: #f7f9fb;
+  font-family: "Architects Daughter", cursive;
+  font-weight: 600;
+  font-size: 1.6rem;
+}
+span a:hover, span a:active {
+  cursor: pointer;
+}
+
+footer {
+  background: #687864;
+}
+
+/*# sourceMappingURL=style.css.map */
