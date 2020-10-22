@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&family=Montserrat:wght@500&family=Mulish:wght@400&display=swap')
+* 
+    margin: 0
+    padding: 0
+    box-sizing: border-box
+
+body
+    background-image: linear-gradient(to left,rgb(0, 139, 139, 0.6), rgba(12, 23, 73, 0.8)), url('https://i.ibb.co/mNht1Hw/slide22.jpg' )
+    background-size: 100%
+    background-repeat: no-repeat
+    font-family: 'Mulish', sans-serif
+    display: flex
+    align-items: center
+    justify-content: center
+    min-height: 100vh
+    width: 100vw
+
+.container
+    background-color: #ffffff
+    border-radius: 10px
+    -webkit-border-radius: 10px
+    box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.034), 0 6.7px 5.5px rgba(0, 0, 0, 0.048)
+    overflow: hidden
+    width: calc( 100vw - 55vw)
+    max-width: 100%
+    margin: 1.2rem
+
+.header
+    background: linear-gradient(to left, #00ffd0, #a16eff)
+    padding: 2rem
+
+    & h2
+        color: #222222
+        font-family: 'Monserrat', sans-serif
+        font-size: 1.6rem
+        text-transform: uppercase
+        text-align: center
+
+.form
+    padding: 35px
+
+.form-control
+    margin-bottom: 27px
+    position: relative
+
+    label
+        display: inline-block
+        margin-bottom: 5px
+    
+    select
+        width: 100%
+        border: 2px solid #f0f0f0
+        border-radius: 5px
+        display: block
+        font-family:'Mulish', sans-serif
+        font-size: 14px
+        padding: 12px
+    
+    input
+        width: 100%
+        border: 2px solid #f0f0f0
+        border-radius: 5px
+        display: block
+        font-family:'Mulish', sans-serif
+        font-size: 14px
+        padding: 12px
+
+        &:focus
+            outline: 0
+            border-color: #777
+        
+        &#check
+            width: 1.3rem
+            height: 1.3rem
+
+    &.success
+        input
+            border-color: #2ecc71
+
+    &.error
+        input
+            border-color: #e74c3c
+
+    & i
+        position: absolute
+        right: 8%
+        top: 38px
+        visibility: hidden
+    
+    &.success 
+        i.fa-check-circle
+            color: #2ecc71
+            visibility: visible
+        
+    &.error
+        i.fa-exclamation-circle
+            color:  #e74c3c
+            visibility: visible
+    & small
+        color: #e74c3c
+        position: absolute
+        left: 0
+        visibility: hidden
+
+    &.error
+        small
+            visibility: visible
+    
+.form .btn
+    background: linear-gradient(to left, #00ffd0, #a16eff)
+    width: 100%
+    border-radius: 6px
+    border: none
+    outline: none
+    color: #ffffff
+    display: block
+    font-family: 'Monserrat', sans-serif
+    font-size: 16px
+    padding: 15px 0
+    margin-top: 20px
+    font-weight: bold
+    text-transform: uppercase
+    transition: all 1s ease
+
+    &:hover
+        background: linear-gradient(to right,#00ffd0, #a16eff) 
+
+@media( max-width: 998px)
+    .container
+        width: calc( 120vw - 35vw )
+        max-width: 100%
