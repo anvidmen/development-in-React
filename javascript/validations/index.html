@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validations</title>
+    <link 
+    rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css"
+    integrity="sha512-PgQMlq+nqFLV4ylk1gwUOgm6CtIIXkKwaIHp/PAIWHzig/lKZSEGKEysh0TCVbHJXCLN7WetD8TFecIky75ZfQ=="
+    crossorigin="anonymous" 
+    />
+    <!-- <link rel="alternate" hreflang="en-ES" href="{$_layoutParams.root}en/register" />
+    <link rel="alternate" hreflang="es-ES" href="{$_layoutParams.root}registro" />
+    <link rel="alternate" hreflang="es-CL" href="{$_layoutParams.root_cl}registro" /> -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h2>Registration form</h2>
+        </div>
+        <form class="form" id="form">
+            <div class="form-control">
+                <label>Username</label>
+                <input type="text" name="username" id="username" placeholder="Enter your fullname" autocomplete="off">
+                <i class="fas fa-check-circle"></i>
+                <i class="fas fa-exclamation-circle"></i>
+                <small>Error Msg</small>
+            </div>
+            <div class="form-control">
+                <label>Email</label>
+                <input type="text" name="email" id="email" placeholder="Enter your Email" autocomplete="off">
+                <i class="fas fa-check-circle"></i>
+                <i class="fas fa-exclamation-circle"></i>
+                <small>Error Msg</small>
+            </div>
+            <div class="form-control">
+                <label>Password</label>
+                <input type="password"  name="pwd" id="pwd" placeholder="Enter your password">
+                <i class="fas fa-check-circle"></i>
+                <i class="fas fa-exclamation-circle"></i>
+                <small>Error Msg</small>
+            </div>
+            <div class="form-control">
+                <label>Address</label>
+                <input type="text" name="address" id="address" placeholder="Enter your Address">
+                <i class="fas fa-check-circle"></i>
+                <i class="fas fa-exclamation-circle"></i>
+                <small>Error Msg</small>
+            </div>
+            <div class="form-control">
+                <label>province</label>
+                <select id="province">
+                    <option selected value=""></option>
+                    <option>Barcelona</option>
+                    <option>Girona</option>
+                    <option>Tarragona</option>
+                    <option>Lleida</option>
+                </select>
+                <i class="fas fa-check-circle"></i>
+                <i class="fas fa-exclamation-circle"></i>
+                <small>Error Msg</small>
+            </div>
+            <div class="form-control">
+                <label>City</label>
+                <input type="text" name="city" id="city" placeholder="Enter your city">
+                <i class="fas fa-check-circle"></i>
+                <i class="fas fa-exclamation-circle"></i>
+                <small>Error Msg</small>
+            </div>
+            <div class="form-control">
+                <label>Postal Code</label>
+                <input type="text" name="pc" id="pc" placeholder="Enter your postal code">
+                <i class="fas fa-check-circle"></i>
+                <i class="fas fa-exclamation-circle"></i>
+                <small>Error Msg</small>
+            </div>
+            <div class="form-control">
+                <input type="checkbox" id="check">
+                <label>
+                    I have read and accept the privacy policy.
+                </label>
+                <i class="fas fa-check-circle"></i>
+                <i class="fas fa-exclamation-circle"></i>
+                <small>Error Msg</small>
+            </div>
+            <input type="submit" value="submit" class="btn">
+        </form>
+    </div>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script type="text/javascript" src="index.js"></script>
+</body>
+</html>
