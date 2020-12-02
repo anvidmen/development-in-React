@@ -1,6 +1,6 @@
 # React
 
-![React](https://www.athmin.com/img/hiredeveloper/gif/react.gif)
+![React](https://s3-eu-central-1.amazonaws.com/yellow.studio/app/public/ckeditor_assets/pictures/138/content_heart-react.gif)
 
 ## Description
 
