@@ -1,82 +1,57 @@
-import React, { Component } from 'react'
-import { Board } from './Board'
+import React, { useState } from 'react'
 import { calculateWinner } from '../calculate-winner'
-import Square from './Square'
+import Board from './Board'
 
-export class Game extends Component {
-  constructor (props) {
-    super(props)
-    this.state = {
-      history: [{
-        squares: Array(9).fill(null)
-      }],
-      stepNumber: 0,
-      xIsNext: true
-    }
+const Game = () => {
+  const [history, setHistory] = useState([Array(9).fill(null)])
+  const [stepNumber, setStepNumber] = useState(0)
+  const [xIsNext, setXisNext] = useState(true)
+  const winner = calculateWinner(history[stepNumber])
+
+  const handleClick = i => {
+    const timeInHistory = history.slice(0, stepNumber + 1)
+    const current = timeInHistory[stepNumber]
+    const squares = [...current]
+
+    if (winner || squares[i]) return
+    squares[i] = xIsNext ? 'X' : 'O'
+    setHistory([...timeInHistory, squares])
+    setStepNumber(timeInHistory.length)
+    setXisNext(!xIsNext)
   }
 
-  handleClick (i) {
-    const history = this.state.history.slice(0, this.state.stepNumber + 1)
-    const current = history[history.length - 1]
-    const squares = current.squares.slice()
-
-    if (calculateWinner(squares) || squares[i]) return
-
-    squares[i] = this.state.xIsNext ? 'X' : 'O'
-    this.setState({
-      history: history.concat([{
-        squares: squares
-      }]),
-      stepNumber: history.length,
-      xIsNext: !this.state.xIsNext
-    })
+  const jumpTo = step => {
+    setStepNumber(step)
+    setXisNext(step % 2 === 0)
   }
 
-  jumpTo (step) {
-    this.setState({
-      stepNumber: step,
-      xIsNext: (step % 2 === 0)
-    })
-  }
-
-  render () {
-    const history = this.state.history
-    const current = history[this.state.stepNumber]
-    const winner = calculateWinner(current.squares)
-
-    const moves = history.map((_step, move) => {
-      const desc = move ? `Go to movement number ${move}` : 'Go to start'
+  const renderMoves = () => (
+    history.map((_step, move) => {
+      const destination = move ? `Go to movement number ${move}` : 'Go to start'
       return (
         <li key={move}>
-          <button onClick={() => this.jumpTo(move)}>{desc}</button>
+          <button onClick={() => jumpTo(move)}>{destination}</button>
         </li>
       )
     })
+  )
+  const status = winner ? `${winner} You are the winner!💥💥` : `Turn of ${xIsNext ? 'X' : 'O'}`
 
-    let status
-
-    if (winner) status = `😎 '${winner}', You are the winner!💥💥 `
-    else status = `Turn of ${this.state.xIsNext ? 'X' : 'O'}`
-
-    return (
-      <div className='game'>
-        <div className='game-board'>
-          <h1>Tic Tac Toe</h1>
-          <Board
-            squares={current.squares}
-            onClick={(i) => this.handleClick(i)}
-          />
-          <div className='game-status'>
-            <h2>{status}</h2>
-          </div>
-        </div>
-        <div className='game-history'>
-          <h3>History</h3>
-          <ol>
-            {moves}
-          </ol>
+  return (
+    <div className='game'>
+      <div className='game-board'>
+        <h1> Tic Tac Toe</h1>
+        <Board squares={history[stepNumber]} onClick={handleClick} />
+        <div className='game-status'>
+          <h2>{status}</h2>
         </div>
       </div>
-    )
-  }
+      <div className='game-history'>
+        <h2>History</h2>
+        {renderMoves()}
+      </div>
+    </div>
+  )
 }
+
+export default Game
