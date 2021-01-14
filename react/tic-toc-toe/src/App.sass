@@ -1,0 +1,150 @@
+body
+    display: flex
+    justify-content: center
+    padding: 2rem
+    min-height: 100%
+
+h1
+    font-size: 2.5rem
+
+.board
+    border-radius: 10px
+    width: 250px
+    height: 250px
+    margin: 0 auto
+    display: grid
+    grid-template: repeat(3, 1fr) / repeat(3, 1fr)
+
+.switch
+    position: relative
+    display: inline-block
+    width: 60px
+    height: 34px
+
+    & input
+        opacity: 0
+        width: 0
+        height: 0
+.slider
+    position: absolute
+    cursor: pointer
+    top: 0
+    left: 0
+    right: 0
+    bottom: 0
+    background-color: #02092c 
+    transition: 0.4s
+    
+    &.rounded
+        border-radius: 34px
+
+        &:before
+            border-radius: 50%
+            
+
+    &:before
+        position: absolute
+        content: ''
+        height: 26px
+        width: 26px
+        left: 4px
+        bottom: 4px
+        background-color:#1eff00e3
+        transition: 0.4s
+
+input:checked + .slider
+    background-color: #D4EFDD
+
+input:checked + .slider:before
+    transform: translateX(26px)
+
+        
+
+.square
+    background: #fff6ea93
+    border: 1px solid #00ff6a
+    float: left
+    font-size: 50px
+    font-weight: bold
+    line-height: 74px
+    width: 70px
+    height: 70px
+    margin-right: -1px
+    margin-top: -1px
+    padding: 0
+    text-align: center
+
+.square:focus
+    outline: none
+
+.winner-square
+    background-color: red
+ul 
+    padding-left: 30px
+
+li 
+    list-style: none
+
+h2, h3
+    font-size: 20px
+    color: #1a1016
+
+.game
+    display: flex
+    flex-wrap: wrap
+    flex-direction: row
+    height: 80vh
+
+    &-status
+        background-color: #ffffff
+        border-radius: 10px
+        
+        
+    &-history
+        flex-wrap: wrap
+        flex-direction: row
+    
+        button
+            background-color: #ffffff66
+            border-radius: 0.7rem
+            outline: none
+            cursor: pointer
+            padding: 0.3rem
+            margin: 0.3rem 0.5rem
+
+.winner
+    background-color: #002753
+    color: white
+    font-weight: bold
+
+.footer-style
+    position: absolute
+    bottom: 0
+    left: 0
+    width: 100%
+    border: 1px solid #4d4d5ef8
+    background-color: #02092cf8
+    color: #ffffff
+    text-align: center
+
+    .m-2
+        padding: 0.5rem
+
+        a
+             margin: 0.3rem
+             color: white
+             text-decoration: none
+        
+@media only screen and (min-device-width: 320px) and (max-device-width: 868px) and (-webkit-min-device-pixel-ratio: 2)
+    body
+        display: flex
+        justify-content: center
+        padding: 2rem
+        min-height: 100%
+
+    h1
+        font-size: 30px
+    
+    h2
+        font-size: 16px
+        color: #1a1016
