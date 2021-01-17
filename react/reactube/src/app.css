@@ -1,0 +1,29 @@
+.app__container {
+    display: flex;
+    justify-content: center;
+}
+.videos__container {
+    flex: 1;
+    padding: 40px 20px;
+    padding-bottom: 0;
+    margin-right: 3rem
+}
+
+.videos__content {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.video__item{
+    flex-grow: 0;
+    max-width: 66.666667%;
+    flex-basis: 66.666667%;
+    padding: 0 40px 0 0;
+}
+
+.video__items {
+    flex-grow: 0;
+    max-width: 33.333333%;
+    flex-basis: 33.333333%;
+}
+
