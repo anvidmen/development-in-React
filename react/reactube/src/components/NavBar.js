@@ -17,7 +17,7 @@ const SearchBar = ({ onSubmit }) => {
   }
 
   return (
-    <header className={classes.header} position='static' color='inherit'>
+    <header className={classes.header} position='static'>
       <div className={classes.brandContainer}>
         <img src={reactube} alt='icon' />
       </div>

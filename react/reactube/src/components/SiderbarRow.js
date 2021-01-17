@@ -7,7 +7,7 @@ const SiderbarRow = ({ Icon, title }) => {
   return (
     <div className={classes.siderbarRow}>
       <Icon className={classes.rowIcon} />
-      <h2 className={classes.rowTile}>{title}</h2>
+      <h2 className={classes.rowTitle}>{title}</h2>
     </div>
   )
 }
