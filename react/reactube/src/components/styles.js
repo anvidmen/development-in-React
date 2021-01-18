@@ -24,9 +24,8 @@ export default makeStyles((theme) => ({
   input: {
     display: 'flex',
     alignItems: 'center',
-    width: '100%',
+    Width: '100%',
     fontSize: 'inherit',
-    padding: '.4em',
     border: '1px solid #777'
   },
   toolbar: {
@@ -47,16 +46,17 @@ export default makeStyles((theme) => ({
     flex: 0.2
   },
   title: {
-    height: 1,
+    height: 20,
     border: 0,
-    backgroundColor: 'ligthgray',
+    marginLeft: '17px',
     marginTop: '11px',
-    marginBottom: '10px'
+    marginBottom: '10px',
+    fontSize: '18px'
   },
   siderbarRow: {
     display: 'flex',
     alignItems: 'center',
-    padding: '10px 20px',
+    padding: '5px 20px',
     '&:hover': {
       backgroundColor: 'lightgray',
       cursor: 'pointer'
@@ -71,21 +71,19 @@ export default makeStyles((theme) => ({
   },
   rowTitle: {
     flex: 1,
-    marginLeft: '20px',
-    fontSize: '12px',
+    marginLeft: '15px',
+    fontSize: '16px',
     fontWeight: 500,
     '&:hover': {
       fontWeight: 'bold'
     }
   },
   videoDetail: {
-    height: '50%',
+    height: '60%',
     width: '100%'
   },
   info: {
-    display: 'flex',
-    marginTop: '10px',
-    paddingRight: '30px'
+    paddingRight: '20px'
   },
   channelTitle: {
     fontSize: '14px',
@@ -94,17 +92,17 @@ export default makeStyles((theme) => ({
   description: {
     fontSize: '14px',
     color: 'gray'
-
   },
   videoSection: {
-
+    padding: '10px'
   },
   videoItem: {
     display: 'flex',
     alignItems: 'center',
-    cursor: 'pointer'
+    cursor: 'pointer',
   },
   image: {
+    padding: '5px',
     marginRight: '20px',
     width: '50%',
     height: '50%'
